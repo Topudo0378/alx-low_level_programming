@@ -1,23 +1,31 @@
 #include <stdio.h>
 /**
-*main - prints sum of even fibonacci
-*suit elements
-*fibonacci suit numbers
-*Return: return 0
-*/
+ * main - main function
+ *
+ * Return: nothing
+ */
 int main(void)
 {
-unsigned long n1 = 0, n2 = 1, n3 = 0, sum = 0;
-while (n3 <= 4000000)
-{
-n3 = n1 + n2;
-n1 = n2;
-n2 = n3;
+	int counter = 2;
 
-if ((n1 % 2) == 0)
-sum += n1;
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
 
-}
-printf("%ld\n", sum);
-return (0);
+	printf("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
+	{
+		counter++;
+		printf("%.0f", c);
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 98)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
+	return (0);
 }
